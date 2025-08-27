@@ -1,23 +1,22 @@
+import react from "../assets/skills/react.png";
+import tailwind from "../assets/skills/tailwind.png";
+import nodejs from "../assets/skills/nodejs.png";
+import nextjs from "../assets/skills/nextjs.png";
+import mongodb from "../assets/skills/mongodb.png";
+import mysql from "../assets/skills/mysql.png";
+import js from "../assets/skills/js.png";
+import git from "../assets/skills/git.png";
+import github from "../assets/skills/github.png";
+import html5 from "../assets/skills/html5.png";
+import cplusplus from "../assets/skills/cplusplus.png";
+import firebase from "../assets/skills/firebase.png";
 
-
-
-import react from '../assets/skills/react.png';
-import tailwind from '../assets/skills/tailwind.png';
-import nodejs from '../assets/skills/nodejs.png';
-import nextjs from '../assets/skills/nextjs.png';
-import mongodb from '../assets/skills/mongodb.png';
-import mysql from '../assets/skills/mysql.png';
-import js from '../assets/skills/js.png';
-import git from '../assets/skills/git.png';
-import github from '../assets/skills/github.png';
-import html5 from '../assets/skills/html5.png';
-import cplusplus from '../assets/skills/cplusplus.png';
-import firebase from '../assets/skills/firebase.png';
-
-
-import project1 from '../assets/projects/project-1.png'
-import project2 from '../assets/projects/project-2.png'
-import project3 from '../assets/projects/project-3.png'
+import project1 from "../assets/projects/project-1.png";
+import project2 from "../assets/projects/project-2.png";
+import project3 from "../assets/projects/project-3.png";
+import grunaraumHaslerImage from "../assets/projects/grunraum-haslser.webp";
+import hydroHitmenImage from "../assets/projects/hydro-hitmen.webp";
+import uisoImage from "../assets/projects/uiso.png";
 
 export const skills = [
   {
@@ -94,33 +93,116 @@ export const skills = [
   },
 ];
 
+export const projects = {
+  Fullstack: [
+    {
+      title: "Ferris Restaurant",
+      description:
+        "An online food ordering platform with user and admin dashboards for Browse, ordering, profile management, and menu administration.",
+      image: project1,
+      techStack: [
+        "React",
+        "Tailwind CSS",
+        "Firebase",
+        "React Router DOM",
+        "React Query",
+        "Express.js",
+        "MongoDB",
+        "JWT",
+      ],
+      github: "https://github.com/Saki4555/Ferris-Restaurant",
+      live: "https://ferris-restaurant.vercel.app",
+    },
+    {
+      title: "TMT Group",
+      description:
+        "A multi-part web platform for TMT Group, featuring an engineering services site and a full-stack travel booking system with user authentication and admin capabilities for managing deals.",
+      image: project2,
+      techStack: [
+        "React",
+        "Tailwind CSS",
+        "Express.js",
+        "MongoDB",
+        "Mongoose",
+        "Firebase",
+        "JWT",
+        "TanStack Query",
+        "React Router",
+      ],
+      github: "https://github.com/Saki4555/tmt-engineering-and-landing-page",
+      live: "https://tmt-group-modernized.vercel.app/",
+    },
+    {
+      title: "Jewelry Shop",
+      description:
+        "A full-stack jewelry e-commerce platform featuring user authentication, Browse detailed listings, managing user's own items, and a shopping cart for authenticated users.",
+      image: project3,
+      techStack: [
+        "React",
+        "Tailwind CSS",
+        "DaisyUI",
+        "Firebase",
+        "React Router DOM",
+        "Express.js",
+        "MongoDB",
+      ],
+      github: "https://github.com/Saki4555/Simple-Jewelry-Shop",
+      live: "https://simple-jewelry-shop.web.app",
+    },
+  ],
+  Landingpage: [
+    {
+      title: "HYDROHITMEN",
+      description:
+        "A modern cleaning services website built with Next.js, featuring dedicated pages for services like pressure washing, window, gutter, roof soft wash, and driveway cleaning. Includes interactive image comparisons, testimonials, contact forms, and smooth animations for a premium user experience.",
+      image: hydroHitmenImage,
+      techStack: [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "ShadCN/UI",
+        "Lucide React",
+        "Tabler Icons",
+      ],
+      github: "https://github.com/Saki4555/hydro-hitmen-",
+      live: "https://hydro-hitmen-dev-mode.vercel.app/",
+    },
+    {
+      title: "Grünraum Hasler Landing Page",
+      description:
+        "A responsive gardening and landscaping service landing page built with React and Vite. Features a modern hero section, service showcases, about section with animations, and a contact form powered by EmailJS for direct inquiries.",
+      image: grunaraumHaslerImage,
+      techStack: [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Framer Motion (motion/react)",
+        "Lucide React",
+        "EmailJS",
+        "Sonner (toast notifications)",
+      ],
+      github: "https://github.com/Saki4555/grunraum-hasler-landing-page",
+      live: "https://grunraum-hasler.vercel.app/",
+    },
+  ],
+  Documentation: [
+    {
+      title: "UISO",
+      description:
+        "A documentation platform built with Next.js that collects and organizes open-source UI resources, helping developers easily explore and use React and Tailwind-based components in their projects.",
 
-
-
-
-export const projects = [
-  {
-    title: "Ferris Restaurant",
-    description: "An online food ordering platform with user and admin dashboards for Browse, ordering, profile management, and menu administration.",
-    image: project1,
-    techStack: ["React", "Tailwind CSS", "Firebase", "React Router DOM", "React Query", "Express.js", "MongoDB", "JWT"],
-    github: "https://github.com/Saki4555/Ferris-Restaurant",
-    live: "https://ferris-restaurant.vercel.app",
-  },
-  {
-    title: "TMT Group",
-    description: "A multi-part web platform for TMT Group, featuring an engineering services site and a full-stack travel booking system with user authentication and admin capabilities for managing deals.",
-    image: project2,
-    techStack: ["React", "Tailwind CSS", "Express.js", "MongoDB", "Mongoose", "Firebase", "JWT", "TanStack Query", "React Router"],
-    github: "https://github.com/Saki4555/tmt-engineering-and-landing-page",
-    live: "https://tmt-group-modernized.vercel.app/",
-  },
-  {
-    title: "Jewelry Shop",
-    description: "A full-stack jewelry e-commerce platform featuring user authentication, Browse detailed listings, managing user's own items, and a shopping cart for authenticated users..",
-    image: project3,
-    techStack: ["React", "Tailwind CSS", "DaisyUI", "Firebase", "React Router DOM", "Express.js", "MongoDB"],
-    github: "https://github.com/Saki4555/Simple-Jewelry-Shop",
-    live: "https://simple-jewelry-shop.web.app",
-  },
-];
+      image: uisoImage,
+      techStack: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Fumadocs (Core/UI/MDX)",
+        "Lucide React",
+      ],
+      github: "https://github.com/Saki4555/uiso",
+      live: "https://uiso.vercel.app",
+    },
+  ],
+};

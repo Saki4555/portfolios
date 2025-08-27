@@ -1,69 +1,3 @@
-// // components/ProjectCard.jsx
-// import Link from "next/link";
-// import Image from "next/image";
-
-// const ProjectCard = ({
-//   title,
-//   description,
-//   image,
-//   techStack,
-//   github,
-//   live,
-// }) => {
-//   return (
-//     <div className="bg-sky-300/10 backdrop-blur-lg text-white w-full   rounded-lg overflow-hidden shadow-2xl border border-sky-800/10  lg:hover:scale-105 group  transition-all duration-300">
-//       <div className="flex flex-col md:flex-row">
-//         {/* Left column - Image */}
-//         <div className="md:w-1/3 p-6 flex items-center ">
-//           <div className="relative w-full aspect-square max-w-60">
-//             {image && (
-//               <Image
-//                 src={image}
-//                 alt={title}
-//                 className="rounded-lg lgD:group-hover:scale-105 transition duration-500  h-full shadow-lg"
-//               />
-//             )}
-//           </div>
-//         </div>
-
-//         {/* Right column - Content */}
-//         <div className="md:w-2/3 p-8 flex flex-col">
-//           <div>
-//             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-slate-100">
-//               {title}
-//             </h2>
-//             <p className="text-slate-300 mb-4">{description}</p>
-
-//             {/* Tech stack */}
-//             <div className="flex flex-wrap gap-2 mb-8">
-//               {techStack?.map((tech, index) => (
-//                 <span
-//                   key={index}
-//                   className="px-3 py-1 bg-[#7f5af0]/20 text-sm text-purple-100 rounded-lg"
-//                 >
-//                   {tech}
-//                 </span>
-//               ))}
-//             </div>
-//           </div>
-
-//           {/* Buttons */}
-//           <div className="flex flex-col sm:flex-row gap-4">
-//             <a href={github} target="_blank" className=" transform rounded-lg border border-[#7f5af0]/50  px-8 py-2 font-medium text-sm  transition-all duration-300 hover:-translate-y-0.5 text-[#7f5af0] bg-[#16161a] hover:bg-[#0e0e10] shadow-[0_0_10px_rgba(127,90,240,0.4)]">
-//               Github
-//             </a>
-//             <a href={live} target='_blank' className="  transform rounded-lg  px-8 py-2 font-medium text-slate-100 transition-all text-sm duration-300 hover:-translate-y-0.5 bg-[#7f5af0]/50 hover:bg-[#9273f7]/70 shadow-[0_0_10px_rgba(127,90,240,0.4)]">
-//               Live
-//             </a>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ProjectCard;
-
 // components/ProjectCard.jsx
 "use client";
 import Link from "next/link";
@@ -75,12 +9,12 @@ const ProjectCard = ({
   idx,
   description,
   image,
+ 
   techStack,
   github,
   live,
 }) => {
-
-  console.log({idx});
+  console.log({ idx });
   return (
     <motion.div
       className="bg-sky-300/10 backdrop-blur-lg text-white w-full rounded-lg overflow-hidden shadow-2xl border border-sky-800/10 lg:hover:scale-95 group transition-all duration-300"
@@ -88,19 +22,21 @@ const ProjectCard = ({
       whileInView={{
         opacity: 1,
         y: 0,
-        transition: { duration: 0.6,  ease: "easeOut" },
+        transition: { duration: 0.6, ease: "easeOut" },
       }}
       viewport={{ once: true, amount: 0.3 }}
     >
       <div className="flex flex-col md:flex-row">
         {/* Left column - Image */}
         <div className="md:w-1/3 p-6 flex items-center">
-          <motion.div className="relative w-full aspect-square max-w-60">
+          <motion.div className="relative w-full aspect-square md:max-w-60 overflow-hidden">
             {image && (
               <Image
                 src={image}
                 alt={title}
-                className="rounded-lg lgD:group-hover:scale-105 transition duration-500 h-full shadow-lg"
+                fill
+                className="rounded-lg object-cover transition duration-500 group-hover:scale-105 shadow-lg"
+                sizes="(max-width: 768px) 100vw, 240px"
               />
             )}
           </motion.div>
